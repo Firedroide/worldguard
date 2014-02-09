@@ -24,6 +24,7 @@ import com.sk89q.worldedit.Vector;
 import com.sk89q.worldedit.blocks.BlockID;
 import com.sk89q.worldedit.blocks.BlockType;
 import com.sk89q.worldedit.blocks.ItemID;
+
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Server;
@@ -31,6 +32,7 @@ import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.Monster;
 import org.bukkit.entity.Tameable;
 import org.bukkit.entity.ExperienceOrb;
 import org.bukkit.entity.FallingBlock;
@@ -38,6 +40,7 @@ import org.bukkit.entity.Item;
 import org.bukkit.entity.TNTPrimed;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+
 import java.util.List;
 
 public class BukkitUtil {
@@ -271,9 +274,7 @@ public class BukkitUtil {
                 || entity instanceof TNTPrimed
                 || entity instanceof ExperienceOrb
                 || entity instanceof FallingBlock
-                || (entity instanceof LivingEntity
-                    && !(entity instanceof Tameable)
-                    && !(entity instanceof Player));
+                || entity instanceof Monster;
     }
 
     /**
